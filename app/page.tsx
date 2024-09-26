@@ -1,5 +1,3 @@
-// import Image from "next/image";
-
 import GridOption from "@/components/GridOption";
 
 export default function Home() {
