@@ -12,12 +12,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 type Props = {
-  searchParamas: {
+  searchParams: {
     url: string;
   };
 };
 
-async function ProductPage({ searchParamas: { url } }: Props) {
+async function ProductPage({ searchParams: { url } }: Props) {
   const product = await fetchProduct(url);
   if (!product) return notFound();
 
@@ -97,7 +97,7 @@ async function ProductPage({ searchParamas: { url } }: Props) {
         {/* Add to Cart Bu */}
         <hr/>
 
-        
+
       </div>
     </div>
   );
