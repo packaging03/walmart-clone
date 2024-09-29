@@ -1,6 +1,5 @@
 "use client";
 import React, { FormEvent } from "react";
-// import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -96,7 +95,7 @@ function Header() {
             <p className="text-xs font-extralight">
               {cart.length > 0 ? `${cart.length} items` : "No Items"}
             </p>
-            <p>{total}</p>
+            <p>{cart.length > 0 ? `${total}` : "0 "}</p>
           </div>
         </Link>
       </div>

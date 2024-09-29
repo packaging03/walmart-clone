@@ -1,3 +1,4 @@
+import Basket from "@/components/Basket";
 import { ShoppingCartIcon } from "lucide-react";
 import React from "react";
 
@@ -11,7 +12,7 @@ function BasketPage() {
       <p className="mt-2 mb-5">
         Review the items in your cart and checkout whe ready!
       </p>
-      {/* <Basket/> */}
+      <Basket />
     </div>
   );
 }
