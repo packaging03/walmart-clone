@@ -7,5 +7,7 @@ export function getCartTotal(products: Product[]): string {
     0
   );
 
-  return `${products[0]?.currenncy} ${total.toFixed(2)}}`;
+  return `${
+    products[0]?.currenncy ? products[0]?.currenncy : "$"
+  } ${total.toFixed(2)}`;
 }
