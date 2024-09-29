@@ -12,9 +12,14 @@ import {
   User,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useCartStore } from "@/store";
+import { getCartTotal } from "@/lib/getCartTotal";
+import { useShallow } from "zustand/react/shallow";
 
 function Header() {
   const router = useRouter();
+  const cart = useCartStore(useShallow((state) => state.cart));
+  const total = getCartTotal(cart);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -88,8 +93,10 @@ function Header() {
         >
           <ShoppingCart size={20} />
           <div>
-            <p className="text-xs font-extralight">No Items</p>
-            <p>$0.00</p>
+            <p className="text-xs font-extralight">
+              {cart.length > 0 ? `${cart.length} items` : "No Items"}
+            </p>
+            <p>{total}</p>
           </div>
         </Link>
       </div>
