@@ -16,7 +16,6 @@ function Basket() {
       <ul className="space-y-5 divide-y-2">
         {Object.keys(grouped).map((sku) => {
           const item = grouped[sku][0];
-          const _total = getCartTotal(grouped[sku]);
           return (
             <li
               key={sku}

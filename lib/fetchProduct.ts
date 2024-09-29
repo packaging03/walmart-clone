@@ -6,8 +6,6 @@ async function fetchProduct(url: string) {
 
   const newUrl = new URL(`https://www.walmart.com${url}`);
 
-  console.log("Scraping >>> ", newUrl.toString());
-
   const body = {
     source: "universal_ecommerce",
     url: newUrl.toString(),

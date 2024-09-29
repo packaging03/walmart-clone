@@ -11,7 +11,6 @@ type Props = {
 async function SearchPage({ searchParams: { q } }: Props) {
   //Fetch the search results
   const results = await fetchSearch(q);
-  // console.log(results);
   return (
     <div className="p-10">
       <h1 className="text-3xl font-bold mb-2">Results for {q} </h1>
